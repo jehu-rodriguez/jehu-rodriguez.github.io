@@ -1,7 +1,10 @@
 import type { ReactElement } from "react"
 import Banner from "./Banner"
-import { FaGithub } from "react-icons/fa6"
+import { FaFilePdf, FaGithub, FaSquareXTwitter } from "react-icons/fa6"
 import Reveal from "../ui/reveal"
+import { Tooltip } from "../ui/tooltip-card"
+import { FaFacebookSquare } from "react-icons/fa"
+import { MdEmail } from "react-icons/md"
 
 interface HeaderProfileProps {
   name: string,
@@ -11,6 +14,7 @@ interface HeaderProfileProps {
   title: string,
   links?: {
     github?: string,
+    facebook?: string,
     twitter?: string,
     linkedin?: string,
     resume?: string,
@@ -22,7 +26,6 @@ interface HeaderProfileProps {
 export default function HeaderSection({ name, profileImage, age, title, links }: HeaderProfileProps): ReactElement {
   return (
     <>
-
       <Reveal>
         <Banner />
       </Reveal>
@@ -41,19 +44,107 @@ export default function HeaderSection({ name, profileImage, age, title, links }:
         <p className="font-bold text-4xl">{name}</p>
         <p className="text-sm">{age} • {title} • 🇵🇭</p>
 
-        <a
-          className="hover:opacity-80 touch-manipulation active:opacity-75"
-          rel="noopener noreferrer"
-          href={links?.github}
-          style={{
-            WebkitTapHighlightColor: 'transparent',
-            WebkitTouchCallout: 'none',
-            WebkitUserSelect: 'none',
-            userSelect: 'none'
-          }}
-        >
-          <FaGithub size={20} />
-        </a>
+        <div className="flex items-center space-x-2">
+          <Tooltip content={
+            <img src="/tooltip-github.png" alt="github profile" className="max-w-full h-auto" />
+          }
+          >
+            <a
+              className="hover:opacity-80 touch-manipulation active:opacity-75"
+              rel="noopener noreferrer"
+              target="_blank"
+              href={links?.github}
+              style={{
+                WebkitTapHighlightColor: 'transparent',
+                WebkitTouchCallout: 'none',
+                WebkitUserSelect: 'none',
+                userSelect: 'none'
+              }}
+            >
+              <FaGithub size={20} />
+            </a>
+          </Tooltip>
+
+          <Tooltip content={
+            <img src="/tooltip-x.png" alt="twitter profile" className="max-w-full h-auto" />
+          }
+          >
+            <a
+              className="hover:opacity-80 touch-manipulation active:opacity-75"
+              rel="noopener noreferrer"
+              target="_blank"
+              href={links?.twitter}
+              style={{
+                WebkitTapHighlightColor: 'transparent',
+                WebkitTouchCallout: 'none',
+                WebkitUserSelect: 'none',
+                userSelect: 'none'
+              }}
+            >
+              <FaSquareXTwitter size={20} />
+            </a>
+          </Tooltip>
+          <Tooltip content={
+            <img src="/tooltip-facebook.png" alt="facebook profile" className="rounded-sm max-w-full h-auto" />
+          }
+          >
+            <a
+              className="hover:opacity-80 touch-manipulation active:opacity-75"
+              rel="noopener noreferrer"
+              target="_blank"
+              href={links?.facebook}
+              style={{
+                WebkitTapHighlightColor: 'transparent',
+                WebkitTouchCallout: 'none',
+                WebkitUserSelect: 'none',
+                userSelect: 'none'
+              }}
+            >
+              <FaFacebookSquare size={20} />
+            </a>
+          </Tooltip>
+          <Tooltip content={
+            links?.email
+          }
+          >
+            <a
+              className="hover:opacity-80 touch-manipulation active:opacity-75"
+              rel="noopener noreferrer"
+              target="_blank"
+              href={`https://mail.google.com/mail/?view=cm&to=${links?.email}`}
+              style={{
+                WebkitTapHighlightColor: 'transparent',
+                WebkitTouchCallout: 'none',
+                WebkitUserSelect: 'none',
+                userSelect: 'none'
+              }}
+            >
+              <MdEmail size={22} />
+            </a>
+
+          </Tooltip>
+          <Tooltip content={
+            <img src="/tooltip-resume.jpg" alt="resume picture" className="max-w-full h-auto" />
+          }
+          >
+            <a
+              className="hover:opacity-80 touch-manipulation active:opacity-75"
+              rel="noopener noreferrer"
+              target="_blank"
+              href={links?.resume}
+              style={{
+                WebkitTapHighlightColor: 'transparent',
+                WebkitTouchCallout: 'none',
+                WebkitUserSelect: 'none',
+                userSelect: 'none'
+              }}
+            >
+              <FaFilePdf size={17} />
+            </a>
+          </Tooltip>
+
+        </div>
+
       </Reveal>
     </>
   )

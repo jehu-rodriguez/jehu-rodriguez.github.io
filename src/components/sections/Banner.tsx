@@ -1,7 +1,7 @@
 
 import { FaCss3Alt, FaGitAlt, FaHtml5, FaPython, FaReact } from "react-icons/fa6";
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
-import { SiDjango, SiFlask, SiJavascript, SiPostgresql, SiTypescript } from "react-icons/si";
+import { SiDjango, SiFlask, SiJavascript, SiTypescript } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 import { TbSql } from "react-icons/tb";
 
