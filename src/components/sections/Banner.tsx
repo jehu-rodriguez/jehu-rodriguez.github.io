@@ -1,28 +1,68 @@
 
-import { PixelatedCanvas } from "../ui/pixelated-canvas";
+import { FaCss3Alt, FaGitAlt, FaHtml5, FaPython, FaReact } from "react-icons/fa6";
+import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
+import { SiDjango, SiFlask, SiJavascript, SiPostgresql, SiTypescript } from "react-icons/si";
+import { RiNextjsFill } from "react-icons/ri";
+import { TbSql } from "react-icons/tb";
 
-export default function Banner({ bannerImage }: { bannerImage: string }) {
+export default function Banner() {
+  const frontendStackItems =
+    [
+      {
+        icon: <SiJavascript size={50} />,
+        title: "JavaScript"
+      },
+      {
+        icon: <SiTypescript size={50} />,
+        title: "TypeScript"
+      },
+      {
+        icon: <FaReact size={50} />,
+        title: "React"
+      },
+      {
+        icon: <RiNextjsFill size={50} />,
+        title: "Nextjs"
+      },
+      {
+        icon: <FaHtml5 size={50} />,
+        title: "HTML"
+      },
+      {
+        icon: <FaCss3Alt size={50} />,
+        title: "CSS"
+      },
+      {
+        icon: <FaPython size={50} />,
+        title: "Python"
+      },
+      {
+        icon: <SiDjango size={50} />,
+        title: "Django"
+      },
+      {
+        icon: <SiFlask size={50} />,
+        title: "Flask"
+      },
+      {
+        icon: <TbSql size={50} />,
+        title: "SQL"
+      },
+      {
+        icon: <FaGitAlt size={50} />,
+        title: "Git"
+      },
+    ]
+
   return (
+    <div>
+      <InfiniteMovingCards items={frontendStackItems}
+        direction="left"
+        speed="slow"
+      />
 
-    <PixelatedCanvas
-      src={bannerImage}
-      responsive={true}
-      cellSize={4}
-      dotScale={0.9}
-      shape="square"
-      backgroundColor="#000000"
-      dropoutStrength={0.1}
-      interactive
-      distortionStrength={0.2}
-      distortionRadius={200}
-      distortionMode="repel"
-      followSpeed={0.2}
-      jitterStrength={4}
-      jitterSpeed={1}
-      sampleAverage
-      objectFit="fill"
-      className="rounded-2xl shadow-lg w-full! h-[30vh]! md:h-[40vh]! opacity-60 mt-8 z--999"
-    />
+    </div>
+
   )
 }
 
