@@ -12,6 +12,12 @@ export const Tooltip = ({
   children: React.ReactNode;
   containerClassName?: string;
 }) => {
+  const isTouchDevice = typeof window !== "undefined" &&
+    window.matchMedia("(hover: none), (pointer: coarse)").matches;
+
+  if (isTouchDevice) {
+    return <>{children}</>;
+  }
   const [isVisible, setIsVisible] = useState(false);
   const [mouse, setMouse] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
   const [height, setHeight] = useState(0);
@@ -178,7 +184,7 @@ export const Tooltip = ({
           >
             <div
               ref={contentRef}
-              className="text-sm text-neutral-600 p-4 dark:text-neutral-400 leading-relaxed [&_img]:max-w-[400px] [&_img]:h-auto [&_img]:bg-transparent [&_img]:block [&_img]:relative [&_img]:z-10 [&_img]:mb-0 [&_span]:!opacity-100 [&_span>img]:!opacity-100 [&>p]:mb-2 [&>p]:last:mb-0 [&>p]:leading-relaxed [&>*+*]:mt-2"
+              className="text-sm text-neutral-600 p-4 dark:text-neutral-400 leading-relaxed [&_img]:max-w-[200px] [  md:[&_img]:max-w-[400px] [&_img]:h-auto [&_img]:bg-transparent [&_img]:block [&_img]:relative [&_img]:z-10 [&_img]:mb-0 [&_span]:!opacity-100 [&_span>img]:!opacity-100 [&>p]:mb-2 [&>p]:last:mb-0 [&>p]:leading-relaxed [&>*+*]:mt-2"
             >
               {content}
             </div>
