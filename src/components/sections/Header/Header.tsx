@@ -47,6 +47,25 @@ export default function HeaderSection({ name, profileImage, age, title, links }:
 
         <div className="flex items-center space-x-2">
           <Tooltip content={
+            <img src="/tooltip-resume.jpg" alt="resume picture" className="max-w-full h-auto" />
+          }
+          >
+            <a
+              className="hover:opacity-80 touch-manipulation active:opacity-75"
+              rel="noopener noreferrer"
+              target="_blank"
+              href={links?.resume}
+              style={{
+                WebkitTapHighlightColor: 'transparent',
+                WebkitTouchCallout: 'none',
+                WebkitUserSelect: 'none',
+                userSelect: 'none'
+              }}
+            >
+              <button className="flex items-center gap-2 bg-black text-white dark:bg-white dark:text-black rounded-xl p-2 cursor-pointer"><FaFilePdf size={17} />Resume</button>
+            </a>
+          </Tooltip>
+          <Tooltip content={
             <img src="/tooltip-github.png" alt="github profile" className="max-w-full h-auto" />
           }
           >
@@ -124,25 +143,7 @@ export default function HeaderSection({ name, profileImage, age, title, links }:
             </a>
 
           </Tooltip>
-          <Tooltip content={
-            <img src="/tooltip-resume.jpg" alt="resume picture" className="max-w-full h-auto" />
-          }
-          >
-            <a
-              className="hover:opacity-80 touch-manipulation active:opacity-75"
-              rel="noopener noreferrer"
-              target="_blank"
-              href={links?.resume}
-              style={{
-                WebkitTapHighlightColor: 'transparent',
-                WebkitTouchCallout: 'none',
-                WebkitUserSelect: 'none',
-                userSelect: 'none'
-              }}
-            >
-              <FaFilePdf size={17} />
-            </a>
-          </Tooltip>
+
 
         </div>
 

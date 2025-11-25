@@ -173,7 +173,6 @@ a {
   cursor: pointer;
 }
 
-
 body {
   margin: 0 auto;
   min-width: 320px;
@@ -187,7 +186,7 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
+/**/
 /* button { */
 /*   border-radius: 8px; */
 /*   border: 1px solid transparent; */
@@ -200,7 +199,8 @@ h1 {
 /*   transition: border-color 0.25s; */
 /* } */
 /* button:hover { */
-/*   border-color: #646cff; */
+/*   /* border-color: #646cff; */ */
+/*   cursor: pointer */
 /* } */
 /* button:focus, */
 /* button:focus-visible { */
