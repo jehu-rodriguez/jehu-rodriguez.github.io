@@ -18,10 +18,10 @@ export const experienceData = {
       start: "February 2025",
       end: "June 2025",
       name: "Cavite State Univeristy - Bacoor Campus",
-      title: "Software Developer (Intern)",
+      title: "Web Developer (Intern)",
       description: [
         "Worked on developing a web-based automation tool used by the school faculty for the student enrollment system.",
-        "Contributed to the JavaScript backend of the university café’s Electron-based point-of-sale system.",
+        "Contributed to the TypeScript backend of the university café’s point-of-sale system.",
       ],
     },
   ],
