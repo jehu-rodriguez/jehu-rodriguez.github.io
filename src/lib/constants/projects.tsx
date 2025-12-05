@@ -7,10 +7,10 @@ export const cards = [
     src: "/hufano-handicraft.png",
     ctaText: "Visit",
     ctaLink: "https://woodcraft-frontend.vercel.app/",
-    sourceLink: "https://github.com/Jehuuuuu/woodcraft-backend",
+    sourceLink: "",
     sourceLinkText: "Source",
     sourceLinkIcon: <FaGithub size={15} />,
-    sourceUi: "https://github.com/Jehuuuuu/woodcraft-frontend",
+    sourceUi: "",
     sourceUiIcon: <FaGithub size={15} />,
     sourceUiText: "Source(UI)",
     content: () => {
@@ -24,8 +24,8 @@ export const cards = [
     title: "Feedback and Evaluation System with Sentiment Analysis ",
     src: "/feedback-system.png",
     ctaText: "Visit",
-    ctaLink: "https://github.com/Jehuuuuu/Feedback-and-Evaluation-System-Capstone-Project",
-    sourceLink: "https://github.com/Jehuuuuu/Feedback-and-Evaluation-System-Capstone-Project",
+    ctaLink: "",
+    sourceLink: "",
     sourceLinkText: "Source",
     sourceLinkIcon: <FaGithub size={15} />,
     content: () => {

@@ -102,17 +102,19 @@ export function ProjectCard() {
                     </motion.p>
                   </div>
 
-                  <motion.a
-                    layout
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    href={active.ctaLink}
-                    target="_blank"
-                    className="project-modal-cta px-4 py-3 text-sm rounded-full font-bold"
-                  >
-                    {active.ctaText}
-                  </motion.a>
+                  {active.ctaLink && (
+                    <motion.a
+                      layout
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      href={active.ctaLink}
+                      target="_blank"
+                      className="project-modal-cta px-4 py-3 text-sm rounded-full font-bold"
+                    >
+                      {active.ctaText}
+                    </motion.a>
+                  )}
                 </div>
 
                 <div className=" relative px-4">
