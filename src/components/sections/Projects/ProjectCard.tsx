@@ -73,7 +73,7 @@ export function ProjectCard() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="project-modal-card w-screen max-w-[500px] h-screen flex flex-col sm:rounded-3xl md:h-[95vh] overflow-hidden"
+              className="project-modal-card w-screen max-w-125 h-screen flex flex-col sm:rounded-3xl md:h-[95vh] overflow-hidden"
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <img
@@ -123,7 +123,7 @@ export function ProjectCard() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="project-modal-content text-neutral-600 lg:text-base max-h-30 md:h-fit flex flex-col items-start gap-4 overflow-auto [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                    className="project-modal-content text-neutral-600 lg:text-base max-h-30 md:h-fit flex flex-col items-start gap-4 overflow-auto scrollbar-none [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                   >
                     {typeof active.content === "function"
                       ? active.content()
