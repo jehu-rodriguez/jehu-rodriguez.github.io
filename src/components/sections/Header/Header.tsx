@@ -43,7 +43,7 @@ export default function HeaderSection({ name, profileImage, age, title, links }:
         <div className="flex items-center space-x-2">
           {links?.resume && (
             <Tooltip content={
-              <img src="/tooltip-resume.jpg" alt="Resume file of Jehu Rodriguez" className="max-w-full h-auto" />
+              <img src="/tooltip-resume.webp" alt="Resume file of Jehu Rodriguez" className="max-w-full h-auto" />
             }
             >
               <a

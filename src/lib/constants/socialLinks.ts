@@ -14,6 +14,6 @@ export const socialLinks =
   facebook: "https://www.facebook.com/JehuRodriguez017/",
   linkedin: "https://www.linkedin.com/in/jehu-rodriguez-a57051398",
   email: "jehurodriguez143@gmail.com",
-  resume: "jehu-resume.pdf"
+  resume: "Jehu_Rodriguez_Resume.pdf"
 }
 
